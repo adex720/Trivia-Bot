@@ -1,8 +1,6 @@
 package com.adex.trivia;
 
-import com.adex.trivia.commands.Invite;
-import com.adex.trivia.commands.Prefix;
-import com.adex.trivia.commands.Trivia;
+import com.adex.trivia.commands.*;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -56,6 +54,7 @@ public class TriviaBot {
         discordListener.commands.add(new Trivia(this));
         discordListener.commands.add(new Invite(this));
         discordListener.commands.add(new Prefix(this));
+        discordListener.commands.add(new Github(this));
     }
 
     public static void main(String[] args) throws LoginException, InterruptedException {
