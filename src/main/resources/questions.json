@@ -1,0 +1,354 @@
+[
+  {
+    "example": {
+      "question": "",
+      "answers": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "",
+      "difficulty": ""
+    },
+    "question": "Which were the first plants to perform photosynthesis",
+    "answers": [
+      "Algae",
+      "Jungle trees",
+      "Asteraceae",
+      "mosses"
+    ],
+    "category": "biology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which chemical element is S?",
+    "answers": [
+      "Sulphur",
+      "Silver",
+      "Oxygen",
+      "Helium"
+    ],
+    "category": "chemistry",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the chemical symbol of Carbon?",
+    "answers": [
+      "C",
+      "Co",
+      "Ca",
+      "Cr"
+    ],
+    "category": "chemistry",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which chemical element is Ag?",
+    "answers": [
+      "Silver",
+      "Tin",
+      "Lithium",
+      "Platinum"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which chemical element is Mn?",
+    "answers": [
+      "Manganese",
+      "Zinc",
+      "Magnesium",
+      "Copper"
+    ],
+    "category": "chemistry",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the chemical symbol of Copper?",
+    "answers": [
+      "Cu",
+      "Co",
+      "Cp",
+      "C"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which chemical element is Pb?",
+    "answers": [
+      "Lead",
+      "Phosphorus",
+      "Platinum",
+      "Mercury"
+    ],
+    "category": "chemistry",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the chemical symbol of Mercury?",
+    "answers": [
+      "Hg",
+      "Mr",
+      "Mc",
+      "Hr"
+    ],
+    "category": "chemistry",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which chemical element is Gd?",
+    "answers": [
+      "Gadolinium",
+      "Californium",
+      "Cadmium",
+      "Gold"
+    ],
+    "category": "chemistry",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the chemical symbol of Lawrencium?",
+    "answers": [
+      "Lr",
+      "Lw",
+      "La",
+      "Lc"
+    ],
+    "category": "chemistry",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the capital of Portugal?",
+    "answers": [
+      "Lissabon",
+      "Rome",
+      "Paris",
+      "Madrid"
+    ],
+    "category": "geography",
+    "difficulty": "Easy"
+  },
+  {
+    "question": "Who was the first person on space?",
+    "answers": [
+      "Juri Gagarin",
+      "Juri Kondratjuk",
+      "Neil Armstrong",
+      "Nikita Hru^st^sov"
+    ],
+    "category": "history",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many flats/sharps is the difference between minor and minor?",
+    "answers": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "category": "music",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What was the First name of J.S. Bach",
+    "answers": [
+      "Johan",
+      "Joel",
+      "John",
+      "Joe"
+    ],
+    "category": "music",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What was the First name of L. van Beethoven",
+    "answers": [
+      "Ludwig",
+      "Liam",
+      "Lucas",
+      "Leo"
+    ],
+    "category": "music",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many sharps are on D-major",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "category": "music",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many sharps are on D-major",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "category": "music",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many flats are on F-major",
+    "answers": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "category": "music",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many sharps are on D-major",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "category": "music",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many flats are on G-minor",
+    "answers": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "category": "music",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many sharps are on Cis-minor",
+    "answers": [
+      "4",
+      "1",
+      "2",
+      "3"
+    ],
+    "category": "music",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the most common type of trumpet?",
+    "answers": [
+      "Bb-trumpet",
+      "D-trumpet",
+      "F-trumpet",
+      "A-trumpet"
+    ],
+    "category": "music",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which of Beethoven's symphonies, is the most know and starts with the dramatic `Ta-Ta-Ta-Taaa` violins, with the last note being lower than the others?",
+    "answers": [
+      "5th",
+      "3rd",
+      "7th",
+      "9th"
+    ],
+    "category": "music",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "When is J.S. Bach born?",
+    "answers": [
+      "1685",
+      "1680",
+      "1690",
+      "1695"
+    ],
+    "category": "music",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the most common programming language?",
+    "answers": [
+      "python",
+      "java",
+      "c",
+      "javascript"
+    ],
+    "category": "technology",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are the two most common programming languages when making apps for iOs?",
+    "answers": [
+      "Objective-C and Swift",
+      "Java and C#",
+      "Python and Kotlin",
+      "Javascript and C++"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are the two most common programming languages when making apps for Android?",
+    "answers": [
+      "Java and Kotlin",
+      "Kotlin and Python",
+      "Python and Javascript",
+      "Javascript and Java"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the most advanced stuff a computer can do on one command?",
+    "answers": [
+      "remainder from dividing",
+      "potency",
+      "square root",
+      "dividing"
+    ],
+    "category": "technology",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Where is it fastest to get data from?",
+    "answers": [
+      "Registry",
+      "Cache",
+      "Internet",
+      "Ram"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does a computer do, if the data is not found on cache?",
+    "answers": [
+      "Send a command to save it into cache.",
+      "Load it from wherever it is in.",
+      "Search where it is.",
+      "Run into an error."
+    ],
+    "category": "technology",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which was the first Pokémon to be created?",
+    "answers": [
+      "Rhydon",
+      "Pikachu",
+      "Mew",
+      "Bulbasaur"
+    ],
+    "category": "video_games",
+    "difficulty": "advanced"
+  }
+]
