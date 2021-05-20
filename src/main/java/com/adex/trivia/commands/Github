@@ -1,0 +1,32 @@
+package com.adex.trivia.commands;
+
+import com.adex.trivia.TriviaBot;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+
+import java.awt.*;
+import java.util.Date;
+
+public class Github extends Command {
+
+    public static final String GITHUB_LINK = "https://github.com/adex720/Trivia-Bot";
+
+    public Invite(TriviaBot bot) {
+        super(bot, "github", "Sends a link into the code of the bot.");
+    }
+
+    @Override
+    public MessageEmbed execute(MessageReceivedEvent event) {
+        return new EmbedBuilder()
+                .setTitle("INVITE")
+                .addField("View the source code with this link.",
+                        githubLink, false)
+                .setColor(Color.white)
+                .setAuthor(event.getAuthor().getName(), null, event.getAuthor().getAvatarUrl())
+                .setThumbnail(thumbnail)
+                .setTimestamp(new Date().toInstant())
+                .build();
+    }
+
+}
