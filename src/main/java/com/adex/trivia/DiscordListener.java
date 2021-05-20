@@ -60,6 +60,7 @@ public class DiscordListener extends ListenerAdapter {
                                             : bot.prefixList.defaultPrefix) + "`", false)
                             .addField("To start trivia, type: ", "`" + prefix + "trivia` or `" + prefix + "triv`", false)
                             .build()).queue();
+                    return;
                 }
                 char answer = message.charAt(0);
                 if (ANSWERS.containsKey(answer)) {
