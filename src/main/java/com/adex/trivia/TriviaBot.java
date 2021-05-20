@@ -16,6 +16,7 @@ import java.util.TimerTask;
 public class TriviaBot {
 
     public static Dotenv DOTENV = Dotenv.load();
+    public static final int DELAY = 600000; // 10 minutes
 
     public final JDA jda;
     public final Logger logger;
@@ -58,10 +59,10 @@ public class TriviaBot {
     }
 
     public static void main(String[] args) throws LoginException, InterruptedException {
+
         TriviaBot bot = new TriviaBot(DOTENV.get("TOKEN"));
 
-        final int delay = 600000; // 10 minutes
-        final TimerTask save = new TimerTask() {
+        TimerTask save = new TimerTask() {
             @Override
             public void run() {
                 bot.prefixList.save(prefixPath, bot.logger);
@@ -69,7 +70,6 @@ public class TriviaBot {
             }
         };
 
-        bot.timer.schedule(save, delay, delay);
-
+        bot.timer.schedule(save, DELAY, DELAY);
     }
 }
