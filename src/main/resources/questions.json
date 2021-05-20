@@ -55,23 +55,23 @@
     "difficulty": "medium"
   },
   {
+    "question": "How many iron atoms roughly are on 1 gramm?",
+    "answers": [
+      "11 sexdillion",
+      "11 quatrillion",
+      "11 quintillion",
+      "11 septillion"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
     "question": "Which chemical element is Mn?",
     "answers": [
       "Manganese",
       "Zinc",
       "Magnesium",
       "Copper"
-    ],
-    "category": "chemistry",
-    "difficulty": "advanced"
-  },
-  {
-    "question": "What is the chemical symbol of Copper?",
-    "answers": [
-      "Cu",
-      "Co",
-      "Cp",
-      "C"
     ],
     "category": "chemistry",
     "difficulty": "medium"
@@ -86,6 +86,17 @@
     ],
     "category": "chemistry",
     "difficulty": "advanced"
+  },
+{
+    "question": "What is the chemical symbol of Copper?",
+    "answers": [
+      "Cu",
+      "Co",
+      "Cp",
+      "C"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
   },
   {
     "question": "What is the chemical symbol of Mercury?",
@@ -132,12 +143,23 @@
     "difficulty": "Easy"
   },
   {
+    "question": "What is the maximum speed you are allowed to drive on highways on Germany?",
+    "answers": [
+      "There is no limit",
+      "120 km/h",
+      "130 km/h",
+      "140 km/h"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
     "question": "Who was the first person on space?",
     "answers": [
       "Juri Gagarin",
       "Juri Kondratjuk",
       "Neil Armstrong",
-      "Nikita Hru^st^sov"
+      "Nikita Hruštšov"
     ],
     "category": "history",
     "difficulty": "easy"
@@ -273,6 +295,27 @@
     ],
     "category": "music",
     "difficulty": "hard"
+  },
+  {
+    "question": "How long does it take for light to get from the Sun to earth?",
+    "answers": [
+      "8 minutes",
+      "2 minutes",
+      "8 seconds",
+      "2 hours"
+    ],
+    "category": "physics",
+    "difficulty": "easy"
+  {
+    "question": "What does `c` stand for on Albert Einstein's popular mass-energy equivalence `e=mc^2`?",
+    "answers": [
+      "Speed of light",
+      "Density of the object",
+      "Time from the big bang",
+      "Speed the earth is moving"
+    ],
+    "category": "physics",
+    "difficulty": "easy"
   },
   {
     "question": "What is the most common programming language?",
