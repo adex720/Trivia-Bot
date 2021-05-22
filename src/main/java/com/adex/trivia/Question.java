@@ -63,9 +63,9 @@ public class Question {
 
     public static void load(Logger logger) {
         String[] paths = new String[]{"src/main/resources/questions.json"};
-
-        try {
-            for (String path : paths) {
+        
+        for (String path : paths) {
+            try {
                 File file = new File(path);
                 FileReader reader = new FileReader(file);
 
@@ -86,11 +86,12 @@ public class Question {
                     }
                     amount++;
                 }
+            } catch (NullPointerException | IOException e) {
+                logger.info("Failed to find file: " + path);
+            } catch (ParseException e) {
+                logger.info("Invalid json syntax on file " + path);
             }
-        } catch (NullPointerException | IOException e) {
-            logger.info("Failed to find file!");
-        } catch (ParseException e) {
-            logger.info("Invalid json syntax!");
+            logger.info("Loaded all questions from " + path);
         }
     }
 
