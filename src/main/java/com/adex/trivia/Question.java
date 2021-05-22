@@ -144,6 +144,7 @@ public class Question {
         public final MessageEmbed message;
         public final int correctId; // A=0 ; B=1 ; C=2 ; D=3
         public final String correctAnswer;
+        public final Difficulty difficulty;
 
         public BuildQuestion(Question question) {
             correctAnswer = question.answers[0];
@@ -151,6 +152,7 @@ public class Question {
             Collections.shuffle(shuffledAnswers);
 
             correctId = shuffledAnswers.indexOf(correctAnswer);
+            difficulty = question.difficulty;
 
             message = new EmbedBuilder()
                     .setColor(question.category.color)
