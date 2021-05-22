@@ -10,15 +10,14 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 
 public class Profiles {
 
-    public final HashMap<Long, Integer> balance;
+    public final HashMap<Long, Profile> profiles;
 
     public Profiles(String pathToJson, Logger logger) {
 
-        balance = new HashMap<>();
+        profiles = new HashMap<>();
 
         try {
             File prefixFile = new File(pathToJson);
@@ -29,28 +28,27 @@ public class Profiles {
             JSONArray json = (JSONArray) obj;
             for (Object object : json) {
                 JSONObject profile = (JSONObject) object;
-                balance.put((long) profile.get("id"),
-                        (int) (long) profile.get("balance"));
+
+                long id = (long) profile.get("id");
+                int balance = (int) (long) profile.get("balance");
+                int triviasTotal = (int) (long) profile.get("total");
+                int triviasCorrect = (int) (long) profile.get("correct");
+
+                profiles.put((long) profile.get("id"), new Profile(id, balance, triviasTotal, triviasCorrect));
             }
         } catch (Exception exception) {
             logger.info(exception.getMessage() + ", " + Arrays.toString(exception.getStackTrace()));
         }
 
         logger.info("Loaded all prefixes!");
-
-
     }
 
     @SuppressWarnings("unchecked")
     public void save(String path, Logger logger) {
         JSONArray json = new JSONArray();
-        for (Map.Entry<Long, Integer> entry : balance.entrySet()) {
-            JSONObject profileJson = new JSONObject();
+        for (Profile profile : profiles.values()) {
 
-            profileJson.put("id", entry.getKey());
-            profileJson.put("balance", entry.getValue());
-
-            json.add(profileJson);
+            json.add(profile.asJson());
         }
 
         try {
@@ -70,5 +68,28 @@ public class Profiles {
         }
 
         logger.info("Saved all connect profiles!");
+    }
+
+    public Profile create(long id) {
+        Profile profile = new Profile(id);
+        profiles.put(id, profile);
+        return profile;
+    }
+
+    public void triviaAnswered(long userId, boolean correct, Question.Difficulty difficulty) {
+        if (correct) {
+            Profile profile = profiles.get(userId); // No need to check if null because profile is created when new trivia is asked.
+            profile.triviasCorrect++;
+            profile.balance += difficulty.prize;
+        }
+    }
+                        
+    public void triviaAsked(long userId) {
+        Profile profile = profiles.get(userId);
+        if (profile == null) {
+            profile = create(userId);
+        }
+
+        profile.triviasTotal++;
     }
 }
