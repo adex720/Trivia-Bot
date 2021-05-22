@@ -1,6 +1,10 @@
 package com.adex.trivia;
 
-import com.adex.trivia.commands.*;
+import com.adex.trivia.commands.Github;
+import com.adex.trivia.commands.Invite;
+import com.adex.trivia.commands.Prefix;
+import com.adex.trivia.commands.Profile;
+import com.adex.trivia.commands.Trivia;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -9,13 +13,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.security.auth.login.LoginException;
-import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class TriviaBot {
 
     public static Dotenv DOTENV = Dotenv.load();
+
     public static final int DELAY = 600000; // 10 minutes
 
     public final JDA jda;
@@ -54,14 +58,14 @@ public class TriviaBot {
     private void loadCommands() {
         discordListener.commands.add(new Trivia(this));
         discordListener.commands.add(new Invite(this));
-        discordListener.commands.add(new Prefix(this));
         discordListener.commands.add(new Github(this));
+        discordListener.commands.add(new Profile(this));
+        discordListener.commands.add(new Prefix(this));
     }
 
     public static void main(String[] args) throws LoginException, InterruptedException {
-
         TriviaBot bot = new TriviaBot(DOTENV.get("TOKEN"));
-        
+
         String prefixPath = DOTENV.get("PREFIX_PATH");
         String profilePath = DOTENV.get("PROFILE_PATH");
 
@@ -74,5 +78,6 @@ public class TriviaBot {
         };
 
         bot.timer.schedule(save, DELAY, DELAY);
+
     }
 }
