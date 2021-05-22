@@ -1,0 +1,42 @@
+package com.adex.trivia;
+
+import org.json.simple.JSONObject;
+
+public class Profile {
+
+    public final long id;
+    public int balance;
+    public int triviasTotal;
+    public int triviasCorrect;
+
+    public Profile(long id) {
+        this.id = id;
+        balance = 0;
+        triviasTotal = 0;
+        triviasCorrect = 0;
+    }
+
+    public Profile(long id, int balance, int triviasTotal, int triviasCorrect) {
+        this.id = id;
+        this.balance = balance;
+        this.triviasTotal = triviasTotal;
+        this.triviasCorrect = triviasCorrect;
+    }
+
+    @SuppressWarnings("unchecked")
+    public JSONObject asJson() {
+        JSONObject json = new JSONObject();
+        json.put("id", id);
+        json.put("balance", balance);
+        json.put("total", triviasTotal);
+        json.put("correct", triviasCorrect);
+
+        return json;
+    }
+
+    @Override
+    public String toString() {
+        return "Profile of <@!" + id + ">:\nBalance: " + balance + "\nTrivias correct/trivias total:\n" +
+                triviasCorrect + "/" + triviasTotal;
+    }
+}
