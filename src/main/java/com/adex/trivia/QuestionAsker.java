@@ -11,7 +11,7 @@ import java.util.TimerTask;
 
 public class QuestionAsker {
 
-    public static final int TIME = 10000; // 10 seconds time to answer
+    public static final int TIME = 15000; // 15 seconds time to answer
 
     public final HashMap<Long, Question.BuildQuestion> active_questions;
     private final Timer timer;
@@ -31,7 +31,7 @@ public class QuestionAsker {
         } else {
             return new EmbedBuilder()
                     .setTitle("TRIVIA")
-                    .addField("Please be patient", "<@!" + userId + "> The cooldown for using trivia is 10 seconds!", false)
+                    .addField("Please be patient", "<@!" + userId + "> please answer your current trivia before starting a new one!", false)
                     .setColor(Color.red)
                     .build();
         }
@@ -58,7 +58,7 @@ public class QuestionAsker {
                         .build()).queue();
             }
 
-            //active_questions.remove(userId);
+            active_questions.remove(userId);
         }
     }
 
@@ -68,7 +68,7 @@ public class QuestionAsker {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                active_questions.remove(userId);
+                active_questions.remove(userId, question);
             }
         }, TIME);
     }
