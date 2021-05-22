@@ -44,7 +44,7 @@ public class TriviaBot {
 
         Question.load(logger);
         prefixList = new PrefixList("-", DOTENV.get("PREFIX_PATH"), logger);
-        questionAsker = new QuestionAsker();
+        questionAsker = new QuestionAsker(this);
 
         loadCommands();
 
