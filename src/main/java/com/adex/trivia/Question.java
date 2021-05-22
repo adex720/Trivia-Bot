@@ -63,7 +63,7 @@ public class Question {
 
     public static void load(Logger logger) {
         String[] paths = new String[]{"src/main/resources/questions.json"};
-        
+
         for (String path : paths) {
             try {
                 File file = new File(path);
@@ -79,7 +79,7 @@ public class Question {
                         logger.info("Loaded question no. {} for category {} as difficulty {}", amount, question.category, question.difficulty);
                     } catch (Exception e) {
                         logger.info("""
-                                Failed to load question id {} , trying next question with same id
+                                Failed to load question id {} , getting next question with same id
                                 Reason: {}
                                 StackTrace: {}""", amount, e.getMessage(), e.getStackTrace());
                         continue;
@@ -160,7 +160,7 @@ public class Question {
                     .setTitle("TRIVIA")
                     .addField(question.question, "**A: **" + shuffledAnswers.get(0) +
                             "\n**B: **" + shuffledAnswers.get(1) + "\n**C: **" + shuffledAnswers.get(2) +
-                            "\n**D: **" + shuffledAnswers.get(3) + "Category: `" + question.category +
+                            "\n**D: **" + shuffledAnswers.get(3) + "\nCategory: `" + question.category +
                             "` Difficulty: `" + difficulty + "`", false)
                     .build();
         }
