@@ -75,7 +75,8 @@ public class Question {
                 int amount = 0;
                 for (Object object : json) {
                     try {
-                        Question.fromJson((JSONObject) object);
+                        Question question = Question.fromJson((JSONObject) object);
+                        logger.info("Loaded question no. {} for category {} as difficulty {}", amount, question.category, question.difficulty);
                     } catch (Exception e) {
                         logger.info("""
                                 Failed to load question id {} , trying next question with same id
@@ -83,7 +84,6 @@ public class Question {
                                 StackTrace: {}""", amount, e.getMessage(), e.getStackTrace());
                         continue;
                     }
-                    logger.info("Loaded question no. {}", amount);
                     amount++;
                 }
             }
