@@ -158,9 +158,9 @@ public class Question {
                     .setColor(question.category.color)
                     .setTitle("TRIVIA")
                     .addField(question.question, "**A: **" + shuffledAnswers.get(0) +
-                            "\n**B: **" + shuffledAnswers.get(1) +
-                            "\n**C: **" + shuffledAnswers.get(2) +
-                            "\n**D: **" + shuffledAnswers.get(3), false)
+                            "\n**B: **" + shuffledAnswers.get(1) + "\n**C: **" + shuffledAnswers.get(2) +
+                            "\n**D: **" + shuffledAnswers.get(3) + "Category: `" + question.category +
+                            "` Difficulty: `" + difficulty + "`", false)
                     .build();
         }
     }
