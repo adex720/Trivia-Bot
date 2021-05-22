@@ -12,7 +12,7 @@ public class Github extends Command {
 
     public static final String GITHUB_LINK = "https://github.com/adex720/Trivia-Bot";
 
-    public Invite(TriviaBot bot) {
+    public Github(TriviaBot bot) {
         super(bot, "github", "Sends a link into the code of the bot.");
     }
 
@@ -21,7 +21,7 @@ public class Github extends Command {
         return new EmbedBuilder()
                 .setTitle("INVITE")
                 .addField("View the source code with this link.",
-                        githubLink, false)
+                        GITHUB_LINK, false)
                 .setColor(Color.white)
                 .setAuthor(event.getAuthor().getName(), null, event.getAuthor().getAvatarUrl())
                 .setThumbnail(thumbnail)
