@@ -27,6 +27,7 @@ public class QuestionAsker {
         if (!active_questions.containsKey(userId)) {
             final Question.BuildQuestion question = Question.getRandom();
             channel.sendMessage(question.message).queue(message -> addQuestion(userId, question));
+            bot.profiles.triviaAsked(userId);
         } else {
             return new EmbedBuilder()
                     .setTitle("TRIVIA")
