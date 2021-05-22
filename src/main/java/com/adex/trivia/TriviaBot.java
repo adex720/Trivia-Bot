@@ -61,6 +61,9 @@ public class TriviaBot {
     public static void main(String[] args) throws LoginException, InterruptedException {
 
         TriviaBot bot = new TriviaBot(DOTENV.get("TOKEN"));
+        
+        String prefixPath = DOTENV.get("PREFIX_PATH");
+        String profilePath = DOTENV.get("PROFILE_PATH");
 
         TimerTask save = new TimerTask() {
             @Override
