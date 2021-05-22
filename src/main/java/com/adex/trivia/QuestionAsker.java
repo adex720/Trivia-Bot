@@ -41,6 +41,8 @@ public class QuestionAsker {
     public void questionAnswered(MessageChannel channel, int answer, long userId) {
         Question.BuildQuestion question = active_questions.get(userId);
         if (question != null) {
+            bot.profiles.triviaAnswered(userId, question.correctId == answer, question.difficulty);
+            
             if (question.correctId == answer) {
                 channel.sendMessage(new EmbedBuilder()
                         .setTitle("TRIVIA")
