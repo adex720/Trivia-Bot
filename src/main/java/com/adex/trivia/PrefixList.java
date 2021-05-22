@@ -41,8 +41,11 @@ public class PrefixList {
                 long id = Long.parseLong(prefix.get("id").toString());
                 prefixes.put(id, prefix.get("prefix").toString());
             }
-        } catch (Exception exception) {
-            logger.info(exception.getMessage() + ", " + Arrays.toString(exception.getStackTrace()));
+        } catch (Exception e) {
+            logger.info("""
+                    Failed to load prefixes file!
+                    Reason: {}
+                    StackTrace: {}""", e.getMessage(), e.getStackTrace());
         }
 
         logger.info("Loaded all prefixes!");
@@ -77,7 +80,7 @@ public class PrefixList {
                     StackTrace: {}""", e.getMessage(), e.getStackTrace());
         }
 
-        logger.info("Prefix list updated and saved!");
+        logger.info("Saved all prefixes!");
     }
 
     public String getPrefix(long id) {
