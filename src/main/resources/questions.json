@@ -306,6 +306,7 @@
     ],
     "category": "physics",
     "difficulty": "easy"
+  },
   {
     "question": "What does `c` stand for on Albert Einstein's popular mass-energy equivalence `e=mc^2`?",
     "answers": [
