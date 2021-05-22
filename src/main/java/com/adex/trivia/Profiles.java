@@ -19,6 +19,10 @@ public class Profiles {
 
         profiles = new HashMap<>();
 
+        load(pathToJson, logger);
+    }
+
+    private void load(String pathToJson, Logger logger) {
         try {
             File prefixFile = new File(pathToJson);
 
@@ -40,7 +44,7 @@ public class Profiles {
             logger.info(exception.getMessage() + ", " + Arrays.toString(exception.getStackTrace()));
         }
 
-        logger.info("Loaded all prefixes!");
+        logger.info("Loaded all profiles!");
     }
 
     @SuppressWarnings("unchecked")
@@ -67,7 +71,7 @@ public class Profiles {
                     StackTrace: {}""", e.getMessage(), e.getStackTrace());
         }
 
-        logger.info("Saved all connect profiles!");
+        logger.info("Saved all profiles!");
     }
 
     public Profile create(long id) {
