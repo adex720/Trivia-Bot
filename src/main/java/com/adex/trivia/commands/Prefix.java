@@ -19,10 +19,10 @@ public class Prefix extends Command {
         if (event.getMessage().isFromGuild()) {
             if (event.getMember().hasPermission(Permission.ADMINISTRATOR)) {
                 String message = event.getMessage().getContentRaw();
-                int length = bot.prefixList.getPrefix(event.getGuild().getIdLong()).length() + 7;
-                if (length < message.length()) { // typing only '-prefix' doesn't throw exception and trying to set it into nothing wont work
+                int afterCommandLength = bot.prefixList.getPrefix(event.getGuild().getIdLong()).length() + 7;
+                if (afterCommandLength < message.length()) {
                     User user = event.getAuthor();
-                    String newPrefix = message.substring(length);
+                    String newPrefix = message.split(" ")[1];
                     bot.prefixList.setPrefix(event.getGuild().getIdLong(), newPrefix);
                     return new EmbedBuilder()
                             .setTitle("NEW PREFIX")
