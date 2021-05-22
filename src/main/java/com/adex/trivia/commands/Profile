@@ -1,0 +1,63 @@
+package com.adex.trivia.commands;
+
+import com.adex.trivia.DiscordListener;
+import com.adex.trivia.TriviaBot;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+
+import java.awt.*;
+
+public class Profile extends Command {
+
+    public Profile(TriviaBot bot) {
+        super(bot, "profile", "Shows your or someone else's profile", "profile [mention or user_id]");
+    }
+
+    @Override
+    public MessageEmbed execute(MessageReceivedEvent event) {
+
+        String[] args = event.getMessage().getContentRaw().split(" ");
+
+        long id = event.getAuthor().getIdLong();
+
+        if (args.length > 1) {
+            try {
+                id = Long.parseLong(args[1]);
+            } catch (NumberFormatException ignored) {
+                try {
+                    id = Long.parseLong(args[1].substring(3, 21)); // <@!560815341140181034>  -> 560815341140181034
+                } catch (NumberFormatException e) {
+                    return new EmbedBuilder()
+                            .setTitle("PROFILE")
+                            .setColor(Color.yellow)
+                            .addField("Invalid arguments", "Mention someone or bring their user id", false)
+                            .build();
+                }
+            }
+        }
+
+        com.adex.trivia.Profile profile = bot.profiles.getProfile(id);
+        if (profile == null) {
+            if (id == event.getAuthor().getIdLong()) {
+                profile = bot.profiles.create(id);
+            } else
+                return new EmbedBuilder()
+                        .setTitle("PROFILE")
+                        .setColor(DiscordListener.getColorFromLong(id))
+                        .addField("Profile not found", "New profile can only be created by themself.", false)
+                        .build();
+        }
+
+        return new EmbedBuilder()
+                .setTitle("PROFILE")
+                .setColor(DiscordListener.getColorFromLong(id))
+                .addField("Profile", profile.toString(), false)
+                .build();
+    }
+
+    @Override
+    public String[] getAliases() {
+        return new String[]{"prof", "p"};
+    }
+}
