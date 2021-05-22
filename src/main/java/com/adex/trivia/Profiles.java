@@ -74,6 +74,17 @@ public class Profiles {
         logger.info("Saved all profiles!");
     }
 
+    public Profile getProfile(long userId) {
+        return profiles.get(userId);
+    }
+
+    /*public Profile getOrCreateProfile(long userId) {
+        Profile profile = profiles.get(userId);
+
+        if (profile != null) return profile;
+        return create(userId);
+    }*/
+
     public Profile create(long id) {
         Profile profile = new Profile(id);
         profiles.put(id, profile);
@@ -87,7 +98,7 @@ public class Profiles {
             profile.balance += difficulty.prize;
         }
     }
-                        
+
     public void triviaAsked(long userId) {
         Profile profile = profiles.get(userId);
         if (profile == null) {
