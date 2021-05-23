@@ -8,7 +8,9 @@ import org.slf4j.Logger;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class Profiles {
@@ -106,5 +108,28 @@ public class Profiles {
         }
 
         profile.triviasTotal++;
+    }
+
+    public ArrayList<Profile> getLeaderboard(int category) {
+
+        ArrayList<Profile> profiles = new ArrayList<>(this.profiles.values());
+
+        Comparator<Profile> comparator;
+
+        switch (category) {
+            case 1 -> comparator = Comparator.comparing((Profile o) -> o.triviasTotal);
+
+            case 2 -> comparator = Comparator.comparing((Profile o) -> o.triviasCorrect);
+
+            case 3 -> comparator = Comparator.comparing((Profile o) -> o.balance);
+
+            default -> {
+                return new ArrayList<>();
+            }
+        }
+
+        profiles.sort(comparator);
+
+        return profiles;
     }
 }
