@@ -100,12 +100,14 @@ public class Question {
         BIOLOGY("39ab00"), GEOGRAPHY("012191"), CHEMISTRY("00ddcd"),
         PHYSICS("570101"), HISTORY("474747"), VIDEO_GAMES("e85858"),
         MUSIC("cc9808"), TECHNOLOGY("4f2b02"), CULTURE("66048a"),
-        LANGUAGE("28de92"), MISCELLANEOUS("bfbfbf"), EVENT("000000");
+        LANGUAGE("28de92"), SPORT("eb7831"), MISCELLANEOUS("bfbfbf")
+        , EVENT("c77b08");
 
         /**
          * physics        : dark red
          * video games    : light red
          * technology     : brown
+         * sports         : orange
          * music          : yellow
          * biology        : green
          * chemistry      : light turquoise
@@ -117,7 +119,6 @@ public class Question {
          * <p>
          * event          : varies with event
          */
-
         public final Color color;
 
         Category(String colorHex) {
