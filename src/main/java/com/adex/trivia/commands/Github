@@ -19,7 +19,7 @@ public class Github extends Command {
     @Override
     public MessageEmbed execute(MessageReceivedEvent event) {
         return new EmbedBuilder()
-                .setTitle("INVITE")
+                .setTitle("GITHUB")
                 .addField("View the source code with this link.",
                         GITHUB_LINK, false)
                 .setColor(Color.white)
