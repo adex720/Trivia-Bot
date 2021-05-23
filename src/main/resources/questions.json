@@ -87,7 +87,7 @@
     "category": "chemistry",
     "difficulty": "advanced"
   },
-{
+  {
     "question": "What is the chemical symbol of Copper?",
     "answers": [
       "Cu",
@@ -132,6 +132,17 @@
     "difficulty": "hard"
   },
   {
+    "question": "Which country has won the Eurovision songfest the most times?",
+    "answers": [
+      "Ireland",
+      "Sweden",
+      "France",
+      "Netherlands"
+    ],
+    "category": "culture",
+    "difficulty": "easy"
+  },
+  {
     "question": "What is the capital of Portugal?",
     "answers": [
       "Lissabon",
@@ -140,7 +151,40 @@
       "Madrid"
     ],
     "category": "geography",
-    "difficulty": "Easy"
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which country has the highest population density?",
+    "answers": [
+      "Monaco",
+      "India",
+      "Japan",
+      "Singapore"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which country has the lowest population density?",
+    "answers": [
+      "Mongolia",
+      "Russia",
+      "Denmark (with Greenland)",
+      "Australia"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "With which country does France share its longest border with?",
+    "answers": [
+      "Brazil",
+      "Germany",
+      "Spain",
+      "Switzerland"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
   },
   {
     "question": "What is the maximum speed you are allowed to drive on highways on Germany?",
@@ -193,6 +237,61 @@
       "Liam",
       "Lucas",
       "Leo"
+    ],
+    "category": "music",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many keys does the keyboard of piano have in total?",
+    "answers": [
+      "88",
+      "76",
+      "82",
+      "94"
+    ],
+    "category": "music",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many white keys does the keyboard of piano have in total?",
+    "answers": [
+      "52",
+      "44",
+      "48",
+      "56"
+    ],
+    "category": "music",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many black keys does the keyboard of piano have in total?",
+    "answers": [
+      "36",
+      "33",
+      "39",
+      "42"
+    ],
+    "category": "music",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many strings does a default bass have?",
+    "answers": [
+      "4",
+      "3",
+      "5",
+      "6"
+    ],
+    "category": "music",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many strings does a default guitar gave?",
+    "answers": [
+      "6",
+      "4",
+      "5",
+      "8"
     ],
     "category": "music",
     "difficulty": "easy"
@@ -264,12 +363,56 @@
     "difficulty": "medium"
   },
   {
+    "question": "Which is the name for high man's voice?",
+    "answers": [
+      "Tenor",
+      "Alto",
+      "Baritone",
+      "Contra-alto"
+    ],
+    "category": "music",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What does Mozart's famous `Eine kleine Nachtmusic` mean in English?",
+    "answers": [
+      "A small nightmusic",
+      "One key to music",
+      "One suit for night",
+      "A joyful lullaby"
+    ],
+    "category": "music",
+    "difficulty": "medium"
+  },
+  {
     "question": "Which is the most common type of trumpet?",
     "answers": [
       "Bb-trumpet",
       "D-trumpet",
       "F-trumpet",
       "A-trumpet"
+    ],
+    "category": "music",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the scale of a soprano-singer?",
+    "answers": [
+      "240-1170 hz",
+      "220-900 hz",
+      "200-1080 hz",
+      "180-760 hz"
+    ],
+    "category": "music",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the scale of a tenor-singer?",
+    "answers": [
+      "110-350 hz",
+      "80-330 hz",
+      "130-410 hz",
+      "155-430 hz"
     ],
     "category": "music",
     "difficulty": "advanced"
@@ -297,6 +440,50 @@
     "difficulty": "hard"
   },
   {
+    "question": "What is the morse code for `S`?",
+    "answers": [
+      "`...`",
+      "`---`",
+      "`--.`",
+      "`.-.`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the morse code for `P`?",
+    "answers": [
+      "`.--.`",
+      "`----`",
+      "`-.-.`",
+      "`..--`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which character has the morse code `.---`?",
+    "answers": [
+      "`J`",
+      "`I`",
+      "`K`",
+      "`L`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which character has the morse code `..--.`?",
+    "answers": [
+      "`!`",
+      "`.`",
+      "`,`",
+      "`?`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "advanced"
+  },
+  {
     "question": "How long does it take for light to get from the Sun to earth?",
     "answers": [
       "8 minutes",
@@ -319,12 +506,45 @@
     "difficulty": "easy"
   },
   {
+    "question": "How many mph is 80 mk/h",
+    "answers": [
+      "50",
+      "45",
+      "55",
+      "60"
+    ],
+    "category": "physics",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many times is Neptune away from the sun compared to Earth?",
+    "answers": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "category": "physics",
+    "difficulty": "advanced"
+  },
+  {
     "question": "What is the most common programming language?",
     "answers": [
       "python",
       "java",
       "c",
       "javascript"
+    ],
+    "category": "technology",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When is the XOR-operation true?",
+    "answers": [
+      "When the values are different",
+      "When none or other of the values is true",
+      "When other or both of the values are true",
+      "When none or both values are true"
     ],
     "category": "technology",
     "difficulty": "easy"
@@ -352,17 +572,6 @@
     "difficulty": "medium"
   },
   {
-    "question": "What is the most advanced stuff a computer can do on one command?",
-    "answers": [
-      "remainder from dividing",
-      "potency",
-      "square root",
-      "dividing"
-    ],
-    "category": "technology",
-    "difficulty": "advanced"
-  },
-  {
     "question": "Where is it fastest to get data from?",
     "answers": [
       "Registry",
@@ -374,14 +583,47 @@
     "difficulty": "medium"
   },
   {
+    "question": "What is the most advanced stuff a computer can do on one command?",
+    "answers": [
+      "remainder from dividing",
+      "potency",
+      "square root",
+      "dividing"
+    ],
+    "category": "technology",
+    "difficulty": "advanced"
+  },
+  {
     "question": "What does a computer do, if the data is not found on cache?",
     "answers": [
-      "Send a command to save it into cache.",
-      "Load it from wherever it is in.",
-      "Search where it is.",
+      "Send a command to save it into cache, then rerun the previous command.",
+      "Load it from wherever it is in and continue the program normally.",
+      "Search where it is. After found send a command to get it.",
       "Run into an error."
     ],
     "category": "technology",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "How many dimensions are on vanilla Minecraft?",
+    "answers": [
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "category": "video_games",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which was the first game Super Mario appeared in?",
+    "answers": [
+      "Donkey Kong",
+      "Super Mario Bros.",
+      "Mario Bros. (Game & Watch)",
+      "Nintendo Super world"
+    ],
+    "category": "video_games",
     "difficulty": "advanced"
   },
   {
