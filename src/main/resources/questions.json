@@ -77,6 +77,17 @@
     "difficulty": "medium"
   },
   {
+    "question": "Which is the most noble metal?",
+    "answers": [
+      "Gold",
+      "Platinum",
+      "Mercury",
+      "Iridium"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
     "question": "Which chemical element is Pb?",
     "answers": [
       "Lead",
@@ -127,6 +138,17 @@
       "Lw",
       "La",
       "Lc"
+    ],
+    "category": "chemistry",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of these metals is the least noble?",
+    "answers": [
+      "Sodium",
+      "Magnesium",
+      "Aluminium",
+      "Zinc"
     ],
     "category": "chemistry",
     "difficulty": "hard"
@@ -207,6 +229,50 @@
     ],
     "category": "history",
     "difficulty": "easy"
+  },
+  {
+    "question": "What is the morse code for `S`?",
+    "answers": [
+      "`...`",
+      "`---`",
+      "`--.`",
+      "`.-.`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the morse code for `P`?",
+    "answers": [
+      "`.--.`",
+      "`----`",
+      "`-.-.`",
+      "`..--`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which character has the morse code `.---`?",
+    "answers": [
+      "`J`",
+      "`I`",
+      "`K`",
+      "`L`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which character has the morse code `..--.`?",
+    "answers": [
+      "`!`",
+      "`.`",
+      "`,`",
+      "`?`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "advanced"
   },
   {
     "question": "How many flats/sharps is the difference between minor and minor?",
@@ -440,50 +506,6 @@
     "difficulty": "hard"
   },
   {
-    "question": "What is the morse code for `S`?",
-    "answers": [
-      "`...`",
-      "`---`",
-      "`--.`",
-      "`.-.`"
-    ],
-    "category": "miscellaneous",
-    "difficulty": "easy"
-  },
-  {
-    "question": "What is the morse code for `P`?",
-    "answers": [
-      "`.--.`",
-      "`----`",
-      "`-.-.`",
-      "`..--`"
-    ],
-    "category": "miscellaneous",
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which character has the morse code `.---`?",
-    "answers": [
-      "`J`",
-      "`I`",
-      "`K`",
-      "`L`"
-    ],
-    "category": "miscellaneous",
-    "difficulty": "medium"
-  },
-  {
-    "question": "Which character has the morse code `..--.`?",
-    "answers": [
-      "`!`",
-      "`.`",
-      "`,`",
-      "`?`"
-    ],
-    "category": "miscellaneous",
-    "difficulty": "advanced"
-  },
-  {
     "question": "How long does it take for light to get from the Sun to earth?",
     "answers": [
       "8 minutes",
@@ -528,12 +550,34 @@
     "difficulty": "advanced"
   },
   {
+    "question": "Which language is used on website layouts?",
+    "answers": [
+      "Html",
+      "Javascript",
+      "C++",
+      "Python"
+    ],
+    "category": "technology",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which language is used on website actions?",
+    "answers": [
+      "Javascript",
+      "Python",
+      "Kotlin",
+      "C#"
+    ],
+    "category": "technology",
+    "difficulty": "easy"
+  },
+  {
     "question": "What is the most common programming language?",
     "answers": [
-      "python",
-      "java",
-      "c",
-      "javascript"
+      "Python",
+      "Java",
+      "C",
+      "Javascript"
     ],
     "category": "technology",
     "difficulty": "easy"
@@ -548,6 +592,17 @@
     ],
     "category": "technology",
     "difficulty": "easy"
+  },
+  {
+    "question": "Which language is used on website styles?",
+    "answers": [
+      "Css",
+      "Html",
+      "Ruby",
+      "Swift"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
   },
   {
     "question": "What are the two most common programming languages when making apps for iOs?",
@@ -578,6 +633,17 @@
       "Cache",
       "Internet",
       "Ram"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which color has a rgb values of 255,128,0",
+    "answers": [
+      "Orange",
+      "Yellow",
+      "Lime",
+      "Brown"
     ],
     "category": "technology",
     "difficulty": "medium"
