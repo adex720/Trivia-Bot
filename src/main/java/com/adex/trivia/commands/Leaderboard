@@ -1,0 +1,132 @@
+package com.adex.trivia.commands;
+
+import com.adex.trivia.Profile;
+import com.adex.trivia.TriviaBot;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+
+public class Leaderboard extends Command {
+
+    public static final HashMap<String, Integer> CATEGORIES;
+
+    public static final HashMap<Long, Long> COOLDOWNS = new HashMap<>();
+
+    public static final int PER_PAGE = 20;
+
+    static {
+        CATEGORIES = new HashMap<>() {{
+            put("trivias", 1);
+            put("trivias_total", 1);
+            put("trivias-total", 1);
+            put("total", 1);
+            put("t", 1);
+
+            put("correct", 2);
+            put("c", 2);
+            put("right", 2);
+
+            put("balance", 3);
+            put("bal", 3);
+            put("b", 3);
+        }};
+    }
+
+    public Leaderboard(TriviaBot bot) {
+        super(bot, "leaderboard", "Shows the leaderboard of a category", "leaderboard <category> [page]");
+    }
+
+    @Override
+    public MessageEmbed execute(MessageReceivedEvent event) {
+        String[] args = event.getMessage().getContentRaw().split(" ");
+
+        if (args.length == 1) {
+            return new EmbedBuilder()
+                    .setColor(Color.red)
+                    .setTitle("LEADERBOARD")
+                    .addField("Failed to show leaderboard", "Valid categories are `trivias`, `correct` and `balance`", false)
+                    .build();
+        }
+
+        Integer categoryId = CATEGORIES.get(args[1].toLowerCase());
+
+        if (categoryId == null) {
+            return new EmbedBuilder()
+                    .setColor(Color.red)
+                    .setTitle("LEADERBOARD")
+                    .addField("Failed to show leaderboard", "`" + args[1] + "`is not a valid category.\n" +
+                            "Valid categories are `trivias`, `correct` and `balance`", false)
+                    .build();
+        }
+
+        int page = 1;
+
+        if (args.length > 2) {
+            try {
+                page = Integer.parseInt(args[2]);
+            } catch (NumberFormatException e) {
+                return new EmbedBuilder()
+                        .setColor(Color.red)
+                        .setTitle("LEADERBOARD")
+                        .addField("Failed to show leaderboard", "Valid categories are `trivias`, `correct` and `balance`", false)
+                        .build();
+            }
+        }
+
+        if (page >= 1) {
+            if ((bot.profiles.profiles.size() - 1) / PER_PAGE <= page) {
+
+                ArrayList<Profile> profiles = bot.profiles.getLeaderboard(categoryId);
+                Collections.reverse(profiles);
+
+                EmbedBuilder embedBuilder = new EmbedBuilder()
+                        .setTitle("LEADERBOARD")
+                        .setColor(Color.white);
+
+                StringBuilder text = new StringBuilder();
+                page--;
+
+                int amount = profiles.size() <= page * PER_PAGE ? PER_PAGE : profiles.size() % PER_PAGE;
+                int start = page * PER_PAGE;
+                int end = amount + start;
+
+                for (int i = start; i < end; i++) {
+                    Profile profile = profiles.get(i);
+                    text.append("<@!").append(profile.id).append(">: ").append(profile.getValueById(categoryId)).append("\n");
+                }
+
+                Profile ownProfile = bot.profiles.getProfile(event.getAuthor().getIdLong());
+                if (ownProfile != null) {
+                    text.append("Your rank is ").append(profiles.indexOf(ownProfile) + 1).append(".");
+                }
+
+                return embedBuilder
+                        .addField(args[1].toUpperCase(), text.toString(), false)
+                        .build();
+            }
+
+            return new EmbedBuilder()
+                    .setColor(Color.red)
+                    .setTitle("LEADERBOARD")
+                    .addField("Failed to show leaderboard", "There currently are`" +
+                            (bot.profiles.profiles.size() - 1) / PER_PAGE + "` pages. Can't show page `" + page + "`.", false)
+                    .build();
+        }
+
+        return new EmbedBuilder()
+                .setColor(Color.red)
+                .setTitle("LEADERBOARD")
+                .addField("Failed to show leaderboard", "Page must be at least 1.", false)
+                .build();
+    }
+
+    @Override
+    public String[] getAliases() {
+        return new String[]{"lb", "ranks"};
+    }
+}
