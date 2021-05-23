@@ -61,6 +61,7 @@ public class TriviaBot {
         discordListener.commands.add(new Github(this));
         discordListener.commands.add(new Profile(this));
         discordListener.commands.add(new Prefix(this));
+        discordListener.commands.add(new Leaderboard(this));
     }
 
     public static void main(String[] args) throws LoginException, InterruptedException {
