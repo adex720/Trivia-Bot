@@ -31,7 +31,7 @@ public class QuestionAsker {
         long userId = user.getIdLong();
 
         if (!active_questions.containsKey(userId)) {
-            final Question.BuildQuestion question = Question.getRandom();
+            Question.BuildQuestion question = Question.getRandom(user);
             channel.sendMessage(question.message).queue(message -> addQuestion(userId, question));
             bot.profiles.triviaAsked(userId);
         } else {
