@@ -9,6 +9,7 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 
 public class Leaderboard extends Command {
@@ -50,6 +51,8 @@ public class Leaderboard extends Command {
                     .setColor(Color.red)
                     .setTitle("LEADERBOARD")
                     .addField("Failed to show leaderboard", "Valid categories are `trivias`, `correct` and `balance`", false)
+                    .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                    .setTimestamp(new Date().toInstant())
                     .build();
         }
 
@@ -61,6 +64,8 @@ public class Leaderboard extends Command {
                     .setTitle("LEADERBOARD")
                     .addField("Failed to show leaderboard", "`" + args[1] + "`is not a valid category.\n" +
                             "Valid categories are `trivias`, `correct` and `balance`", false)
+                    .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                    .setTimestamp(new Date().toInstant())
                     .build();
         }
 
@@ -74,6 +79,8 @@ public class Leaderboard extends Command {
                         .setColor(Color.red)
                         .setTitle("LEADERBOARD")
                         .addField("Failed to show leaderboard", "Valid categories are `trivias`, `correct` and `balance`", false)
+                        .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                        .setTimestamp(new Date().toInstant())
                         .build();
             }
         }
@@ -86,7 +93,9 @@ public class Leaderboard extends Command {
 
                 EmbedBuilder embedBuilder = new EmbedBuilder()
                         .setTitle("LEADERBOARD")
-                        .setColor(Color.white);
+                        .setColor(Color.white)
+                        .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                        .setTimestamp(new Date().toInstant());
 
                 StringBuilder text = new StringBuilder();
                 page--;
@@ -115,6 +124,8 @@ public class Leaderboard extends Command {
                     .setTitle("LEADERBOARD")
                     .addField("Failed to show leaderboard", "There currently are`" +
                             (bot.profiles.profiles.size() - 1) / PER_PAGE + "` pages. Can't show page `" + page + "`.", false)
+                    .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                    .setTimestamp(new Date().toInstant())
                     .build();
         }
 
@@ -122,6 +133,8 @@ public class Leaderboard extends Command {
                 .setColor(Color.red)
                 .setTitle("LEADERBOARD")
                 .addField("Failed to show leaderboard", "Page must be at least 1.", false)
+                .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                .setTimestamp(new Date().toInstant())
                 .build();
     }
 
