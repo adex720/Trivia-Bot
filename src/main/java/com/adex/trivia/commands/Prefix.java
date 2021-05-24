@@ -8,6 +8,8 @@ import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
+import java.util.Date;
+
 public class Prefix extends Command {
 
     public Prefix(TriviaBot bot) {
@@ -29,6 +31,8 @@ public class Prefix extends Command {
                             .setColor(DiscordListener.getColorFromLong(user.getIdLong()))
                             .addField(user.getAsTag() + " changed the prefix into `" + newPrefix + "`",
                                     "Example: `" + newPrefix + "trivia`", false)
+                            .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                            .setTimestamp(new Date().toInstant())
                             .build();
                 }
             }
