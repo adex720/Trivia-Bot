@@ -2,7 +2,6 @@ package com.adex.trivia;
 
 import com.adex.trivia.commands.Command;
 import net.dv8tion.jda.api.EmbedBuilder;
-import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -13,8 +12,6 @@ import java.awt.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-
-import static com.adex.trivia.commands.Invite.inviteLink;
 
 public class DiscordListener extends ListenerAdapter {
 
@@ -59,14 +56,17 @@ public class DiscordListener extends ListenerAdapter {
                                     (event.isFromGuild() ? bot.prefixList.getPrefix(event.getGuild().getIdLong())
                                             : bot.prefixList.defaultPrefix) + "`", false)
                             .addField("To start trivia, type: ", "`" + prefix + "trivia` or `" + prefix + "triv`", false)
+                            .setFooter(user.getName(), user.getAvatarUrl())
+                            .setTimestamp(new Date().toInstant())
                             .build()).queue();
                     return;
                 }
-                char answer = message.charAt(0);
-                if (ANSWERS.containsKey(answer)) {
-                    bot.questionAsker.questionAnswered(event.getChannel(), ANSWERS.get(answer), user.getIdLong());
+                if (message.length() != 0) { // message length can be 0 if it contains a file
+                    char answer = message.charAt(0);
+                    if (ANSWERS.containsKey(answer)) {
+                        bot.questionAsker.questionAnswered(event.getChannel(), ANSWERS.get(answer), user);
+                    }
                 }
-
                 return;
             }
 
@@ -76,9 +76,9 @@ public class DiscordListener extends ListenerAdapter {
 
             for (Command command : commands) {
                 if (isRightCommand(command, first)) {
-                   MessageEmbed reply = command.execute(event);
-                   if (reply != null)
-                       event.getChannel().sendMessage(reply).queue();
+                    MessageEmbed reply = command.execute(event);
+                    if (reply != null)
+                        event.getChannel().sendMessage(reply).queue();
                 }
             }
         }
@@ -97,6 +97,7 @@ public class DiscordListener extends ListenerAdapter {
     }
 
     public static Color getColorFromLong(long original) {
+
         int colorInt = (int) original % 16777216 - 1;  // 256^3 = 16777216
 
         int r = (colorInt) & 0xFF;
