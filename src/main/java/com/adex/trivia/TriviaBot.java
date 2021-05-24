@@ -1,10 +1,7 @@
 package com.adex.trivia;
 
-import com.adex.trivia.commands.Github;
-import com.adex.trivia.commands.Invite;
-import com.adex.trivia.commands.Prefix;
 import com.adex.trivia.commands.Profile;
-import com.adex.trivia.commands.Trivia;
+import com.adex.trivia.commands.*;
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -33,6 +30,14 @@ public class TriviaBot {
 
     private final Timer timer;
 
+
+    private final Trivia trivia;
+    private final Invite invite;
+    private final Github github;
+    private final Profile profile;
+    private final Prefix prefix;
+    private final Leaderboard leaderboard;
+
     public TriviaBot(String token) throws LoginException, InterruptedException {
         discordListener = new DiscordListener(this);
 
@@ -50,18 +55,26 @@ public class TriviaBot {
         prefixList = new PrefixList("-", DOTENV.get("PREFIX_PATH"), logger);
         questionAsker = new QuestionAsker(this);
 
+
+        trivia = new Trivia(this);
+        invite = new Invite(this);
+        github = new Github(this);
+        profile = new Profile(this);
+        prefix = new Prefix(this);
+        leaderboard = new Leaderboard(this);
+
         loadCommands();
 
         timer = new Timer();
     }
 
     private void loadCommands() {
-        discordListener.commands.add(new Trivia(this));
-        discordListener.commands.add(new Invite(this));
-        discordListener.commands.add(new Github(this));
-        discordListener.commands.add(new Profile(this));
-        discordListener.commands.add(new Prefix(this));
-        discordListener.commands.add(new Leaderboard(this));
+        discordListener.commands.add(trivia);
+        discordListener.commands.add(invite);
+        discordListener.commands.add(github);
+        discordListener.commands.add(profile);
+        discordListener.commands.add(prefix);
+        discordListener.commands.add(leaderboard);
     }
 
     public static void main(String[] args) throws LoginException, InterruptedException {
@@ -80,5 +93,10 @@ public class TriviaBot {
 
         bot.timer.schedule(save, DELAY, DELAY);
 
+    }
+
+    public void stop() {
+        timer.cancel();
+        leaderboard.stopTimer();
     }
 }
