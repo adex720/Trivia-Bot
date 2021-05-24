@@ -2,6 +2,7 @@ package com.adex.trivia;
 
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.entities.User;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -57,8 +58,8 @@ public class Question {
                 Difficulty.valueOf(difficulty.toUpperCase()));
     }
 
-    public static BuildQuestion getRandom() {
-        return new BuildQuestion(QUESTIONS.get(ThreadLocalRandom.current().nextInt(QUESTIONS.size())));
+    public static BuildQuestion getRandom(User user) {
+        return new BuildQuestion(QUESTIONS.get(ThreadLocalRandom.current().nextInt(QUESTIONS.size())), user);
     }
 
     public static void load(Logger logger) {
@@ -100,8 +101,7 @@ public class Question {
         BIOLOGY("39ab00"), GEOGRAPHY("012191"), CHEMISTRY("00ddcd"),
         PHYSICS("570101"), HISTORY("474747"), VIDEO_GAMES("e85858"),
         MUSIC("cc9808"), TECHNOLOGY("4f2b02"), CULTURE("66048a"),
-        LANGUAGE("28de92"), SPORT("eb7831"), MISCELLANEOUS("bfbfbf")
-        , EVENT("c77b08");
+        LANGUAGE("28de92"), SPORT("eb7831"), MISCELLANEOUS("bfbfbf"), EVENT("c77b08");
 
         /**
          * physics        : dark red
@@ -148,7 +148,7 @@ public class Question {
         public final String correctAnswer;
         public final Difficulty difficulty;
 
-        public BuildQuestion(Question question) {
+        public BuildQuestion(Question question, User user) {
             correctAnswer = question.answers[0];
             List<String> shuffledAnswers = Arrays.asList(Arrays.copyOf(question.answers, 4));
             Collections.shuffle(shuffledAnswers);
@@ -163,6 +163,8 @@ public class Question {
                             "\n**B: **" + shuffledAnswers.get(1) + "\n**C: **" + shuffledAnswers.get(2) +
                             "\n**D: **" + shuffledAnswers.get(3) + "\nCategory: `" + question.category +
                             "` Difficulty: `" + difficulty + "`", false)
+                    .setFooter(user.getName(), user.getAvatarUrl())
+                    .setTimestamp(new Date().toInstant())
                     .build();
         }
     }
