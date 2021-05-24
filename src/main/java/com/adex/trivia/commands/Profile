@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
+import java.util.Date;
 
 public class Profile extends Command {
 
@@ -32,6 +33,8 @@ public class Profile extends Command {
                             .setTitle("PROFILE")
                             .setColor(Color.yellow)
                             .addField("Invalid arguments", "Mention someone or bring their user id", false)
+                            .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                            .setTimestamp(new Date().toInstant())
                             .build();
                 }
             }
@@ -46,6 +49,8 @@ public class Profile extends Command {
                         .setTitle("PROFILE")
                         .setColor(DiscordListener.getColorFromLong(id))
                         .addField("Profile not found", "New profile can only be created by themself.", false)
+                        .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                        .setTimestamp(new Date().toInstant())
                         .build();
         }
 
@@ -53,6 +58,8 @@ public class Profile extends Command {
                 .setTitle("PROFILE")
                 .setColor(DiscordListener.getColorFromLong(id))
                 .addField("Profile", profile.toString(), false)
+                .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                .setTimestamp(new Date().toInstant())
                 .build();
     }
 
