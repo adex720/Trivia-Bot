@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class Invite extends Command {
 
-    public static final String INVITE_LINK = "https://discord.com/oauth2/authorize?client_id=844453314526576660&permissions=2147797056&scope=bot";
+    public static final String INVITE_LINK =  "https://discord.com/oauth2/authorize?client_id=844453314526576660&permissions=2147797056&scope=bot";
 
     public Invite(TriviaBot bot) {
         super(bot, "invite", "Creates an invite for inviting the bot into other severs.");
@@ -23,10 +23,13 @@ public class Invite extends Command {
                 .addField("Add me to your server with this link.",
                         INVITE_LINK, false)
                 .setColor(Color.white)
-                .setAuthor(event.getAuthor().getName(), null, event.getAuthor().getAvatarUrl())
-                .setThumbnail(thumbnail)
+                .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
                 .setTimestamp(new Date().toInstant())
                 .build();
     }
 
+    @Override
+    public String[] getAliases() {
+        return  new String[]{"inv"};
+    }
 }
