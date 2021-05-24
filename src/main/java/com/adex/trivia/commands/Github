@@ -23,8 +23,7 @@ public class Github extends Command {
                 .addField("View the source code with this link.",
                         GITHUB_LINK, false)
                 .setColor(Color.white)
-                .setAuthor(event.getAuthor().getName(), null, event.getAuthor().getAvatarUrl())
-                .setThumbnail(thumbnail)
+                .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
                 .setTimestamp(new Date().toInstant())
                 .build();
     }
