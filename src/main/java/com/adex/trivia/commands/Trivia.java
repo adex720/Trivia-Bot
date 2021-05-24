@@ -12,7 +12,7 @@ public class Trivia extends Command {
 
     @Override
     public MessageEmbed execute(MessageReceivedEvent event) {
-        return bot.questionAsker.commandRan(event.getChannel(), event.getAuthor().getIdLong());
+        return bot.questionAsker.commandRan(event.getChannel(), event.getAuthor());
     }
 
     @Override
