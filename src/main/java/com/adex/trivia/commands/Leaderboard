@@ -4,31 +4,35 @@ import com.adex.trivia.Profile;
 import com.adex.trivia.TriviaBot;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
+import java.util.*;
 
 public class Leaderboard extends Command {
 
     public static final HashMap<String, Integer> CATEGORIES;
 
     public static final HashMap<Long, Long> COOLDOWNS = new HashMap<>();
-
+    public static final int COOLDOWN = 60000;
     public static final int PER_PAGE = 20;
+
+    private final Timer timer;
 
     static {
         CATEGORIES = new HashMap<>() {{
             put("trivias", 1);
             put("trivias_total", 1);
             put("trivias-total", 1);
+            put("total_trivias", 1);
+            put("total-trivias", 1);
             put("total", 1);
             put("t", 1);
 
             put("correct", 2);
+            put("correct_answers", 2);
+            put("correct-answers", 2);
             put("c", 2);
             put("right", 2);
 
@@ -40,10 +44,26 @@ public class Leaderboard extends Command {
 
     public Leaderboard(TriviaBot bot) {
         super(bot, "leaderboard", "Shows the leaderboard of a category", "leaderboard <category> [page]");
+
+        timer = new Timer();
     }
 
     @Override
     public MessageEmbed execute(MessageReceivedEvent event) {
+        User user = event.getAuthor();
+        Long time = COOLDOWNS.get(user.getIdLong());
+
+        if (time != null)
+            return new EmbedBuilder()
+                    .setTitle("LEADERBOARD")
+                    .setColor(Color.red)
+                    .addField("Please wait " + (COOLDOWN - (System.currentTimeMillis() - time)) / 1000 + " more seconds.",
+                            "The cooldown is 1 minute", false)
+                    .setFooter(user.getName(), user.getAvatarUrl())
+                    .setTimestamp(new Date().toInstant())
+                    .build();
+
+
         String[] args = event.getMessage().getContentRaw().split(" ");
 
         if (args.length == 1) {
@@ -88,6 +108,14 @@ public class Leaderboard extends Command {
         if (page >= 1) {
             if ((bot.profiles.profiles.size() - 1) / PER_PAGE <= page) {
 
+                COOLDOWNS.put(user.getIdLong(), System.currentTimeMillis());
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        COOLDOWNS.remove(user.getIdLong());
+                    }
+                }, COOLDOWN);
+
                 ArrayList<Profile> profiles = bot.profiles.getLeaderboard(categoryId);
                 Collections.reverse(profiles);
 
@@ -114,8 +142,17 @@ public class Leaderboard extends Command {
                     text.append("Your rank is ").append(profiles.indexOf(ownProfile) + 1).append(".");
                 }
 
+                String category;
+
+                switch (categoryId) {
+                    case 1 -> category = "TOTAL TRIVIAS";
+                    case 2 -> category = "CORRECT ANSWERS";
+                    case 3 -> category = "BALANCE";
+                    default -> category = "";
+                }
+
                 return embedBuilder
-                        .addField(args[1].toUpperCase(), text.toString(), false)
+                        .addField(category, text.toString(), false)
                         .build();
             }
 
@@ -142,4 +179,9 @@ public class Leaderboard extends Command {
     public String[] getAliases() {
         return new String[]{"lb", "ranks"};
     }
+
+    public void stopTimer() {
+        timer.cancel();
+    }
+
 }
