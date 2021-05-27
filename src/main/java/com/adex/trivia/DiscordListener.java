@@ -131,4 +131,14 @@ public class DiscordListener extends ListenerAdapter {
                                 "\nSee the bot source code with `" + prefix + "github` or [with this link](" + Github.GITHUB_LINK + ")", false)
                         .build()).queue();
     }
+    
+    @Override
+    public void onDisconnect(@NotNull DisconnectEvent event) {
+        bot.save();
+    }
+
+    @Override
+    public void onShutdown(@NotNull ShutdownEvent event) {
+        bot.save();
+    }
 }
