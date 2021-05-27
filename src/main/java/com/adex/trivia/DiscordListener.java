@@ -106,4 +106,29 @@ public class DiscordListener extends ListenerAdapter {
 
         return new Color(r, g, b);
     }
+    
+    @Override
+    public void onGuildJoin(@NotNull GuildJoinEvent event) {
+        bot.logger.info("Joined server " + event.getGuild().getName());
+        String prefix = bot.prefixList.defaultPrefix;
+
+        TextChannel outChannel = null;
+        for (TextChannel channel : event.getGuild().getTextChannels()) {
+            if (channel.canTalk()) {
+                outChannel = channel;
+                break;
+            }
+        }
+
+        Objects.requireNonNull(outChannel).sendMessage(
+                new EmbedBuilder()
+                        .setTitle("Thanks for adding me")
+                        .setColor(Color.yellow)
+                        .addField("Trivia bot", "- My default prefix is `" + prefix + "`, change it with `" + prefix + "prefix`\n" +
+                                "- See a list of all the commands with `" + prefix + "prefix`" +
+                                "\nInvite me to other servers with `" + prefix + "invite` or [with this link](" + Invite.INVITE_LINK + ")" +
+                                "\nJoin the official server `" + prefix + "server` or [with this link](" + Server.SERVER_LINK + ")" +
+                                "\nSee the bot source code with `" + prefix + "github` or [with this link](" + Github.GITHUB_LINK + ")", false)
+                        .build()).queue();
+    }
 }
