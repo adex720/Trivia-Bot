@@ -5,12 +5,12 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
-import java.awt.*;
+import java.awt.Color;
 import java.util.Date;
 
 public class Invite extends Command {
 
-    public static final String INVITE_LINK =  "https://discord.com/oauth2/authorize?client_id=844453314526576660&permissions=2147797056&scope=bot";
+    public static final String INVITE_LINK = "https://discord.com/oauth2/authorize?client_id=844453314526576660&permissions=2147797056&scope=bot";
 
     public Invite(TriviaBot bot) {
         super(bot, "invite", "Creates an invite for inviting the bot into other severs.");
@@ -21,7 +21,7 @@ public class Invite extends Command {
         return new EmbedBuilder()
                 .setTitle("INVITE")
                 .addField("Add me to your server with this link.",
-                        INVITE_LINK, false)
+                      "[Invite me](" + INVITE_LINK + ")", false)
                 .setColor(Color.white)
                 .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
                 .setTimestamp(new Date().toInstant())
@@ -30,6 +30,6 @@ public class Invite extends Command {
 
     @Override
     public String[] getAliases() {
-        return  new String[]{"inv"};
+        return new String[]{"inv"};
     }
 }
