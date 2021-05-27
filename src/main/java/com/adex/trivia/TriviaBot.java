@@ -33,10 +33,12 @@ public class TriviaBot {
 
     private final Trivia trivia;
     private final Invite invite;
+    private final Server server;
     private final Github github;
     private final Profile profile;
     private final Prefix prefix;
     private final Leaderboard leaderboard;
+    private final Help help;
 
     public TriviaBot(String token) throws LoginException, InterruptedException {
         discordListener = new DiscordListener(this);
@@ -58,10 +60,12 @@ public class TriviaBot {
 
         trivia = new Trivia(this);
         invite = new Invite(this);
+        server = new Server(this);
         github = new Github(this);
         profile = new Profile(this);
         prefix = new Prefix(this);
         leaderboard = new Leaderboard(this);
+        help = new Help(this);
 
         loadCommands();
 
@@ -71,10 +75,12 @@ public class TriviaBot {
     private void loadCommands() {
         discordListener.commands.add(trivia);
         discordListener.commands.add(invite);
+        discordListener.commands.add(server);
         discordListener.commands.add(github);
         discordListener.commands.add(profile);
         discordListener.commands.add(prefix);
         discordListener.commands.add(leaderboard);
+        discordListener.commands.add(help);
     }
 
     public static void main(String[] args) throws LoginException, InterruptedException {
@@ -92,7 +98,6 @@ public class TriviaBot {
         };
 
         bot.timer.schedule(save, DELAY, DELAY);
-
     }
 
     public void stop() {
