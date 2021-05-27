@@ -1,0 +1,36 @@
+package com.adex.trivia.commands;
+
+import com.adex.trivia.TriviaBot;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+
+import java.awt.Color;
+import java.util.Date;
+
+public class Server extends Command {
+
+    public static final String SERVER_LINK = "google.com/teapot";
+
+    public Server(TriviaBot bot) {
+        super(bot, "server", "Sends a link to join the official server.");
+    }
+
+    @Override
+    public MessageEmbed execute(MessageReceivedEvent event) {
+        return new EmbedBuilder()
+                .setTitle("GITHUB")
+                .addField("Join the official server with this link.",
+                       "[Join the server](" + SERVER_LINK + ")", false)
+                .setColor(Color.white)
+                .setFooter(event.getAuthor().getName(), event.getAuthor().getAvatarUrl())
+                .setTimestamp(new Date().toInstant())
+                .build();
+    }
+
+    @Override
+    public String[] getAliases() {
+        return new String[]{"support"};
+    }
+
+}
