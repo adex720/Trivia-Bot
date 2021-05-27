@@ -19,6 +19,9 @@ public class TriviaBot {
 
     public static final int DELAY = 600000; // 10 minutes
 
+    private static final String PREFIX_PATH = DOTENV.get("PREFIX_PATH");
+    private static final String PROFILE_PATH = DOTENV.get("PROFILE_PATH");
+
     public final JDA jda;
     public final Logger logger;
     public final QuestionAsker questionAsker;
@@ -39,6 +42,7 @@ public class TriviaBot {
     private final Prefix prefix;
     private final Leaderboard leaderboard;
     private final Help help;
+
 
     public TriviaBot(String token) throws LoginException, InterruptedException {
         discordListener = new DiscordListener(this);
@@ -86,18 +90,19 @@ public class TriviaBot {
     public static void main(String[] args) throws LoginException, InterruptedException {
         TriviaBot bot = new TriviaBot(DOTENV.get("TOKEN"));
 
-        String prefixPath = DOTENV.get("PREFIX_PATH");
-        String profilePath = DOTENV.get("PROFILE_PATH");
-
         TimerTask save = new TimerTask() {
             @Override
             public void run() {
-                bot.prefixList.save(prefixPath, bot.logger);
-                bot.profiles.save(profilePath, bot.logger);
+                bot.save();
             }
         };
 
         bot.timer.schedule(save, DELAY, DELAY);
+    }
+
+    public void save() {
+        prefixList.save(PREFIX_PATH, logger);
+        profiles.save(PROFILE_PATH, logger);
     }
 
     public void stop() {
