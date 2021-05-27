@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class Server extends Command {
 
-    public static final String SERVER_LINK = "google.com/teapot";
+    public static final String SERVER_LINK = "https://discord.gg/URrBnrDPxG";
 
     public Server(TriviaBot bot) {
         super(bot, "server", "Sends a link to join the official server.");
