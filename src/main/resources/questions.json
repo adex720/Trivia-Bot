@@ -33,6 +33,17 @@
     "difficulty": "easy"
   },
   {
+    "question": "Which is the chemical formula of muriatic acid",
+    "answers": [
+      "HCl",
+      "NCl",
+      "NaCl",
+      "SCl"
+    ],
+    "category": "chemistry",
+    "difficulty": "easy"
+  },
+  {
     "question": "What is the chemical symbol of Carbon?",
     "answers": [
       "C",
@@ -220,6 +231,17 @@
     "difficulty": "medium"
   },
   {
+    "question": "Germany attacking which country started the second world war?",
+    "answers": [
+      "Poland",
+      "France",
+      "Great Britain",
+      "Czechoslovakia"
+    ],
+    "category": "history",
+    "difficulty": "easy"
+  },
+  {
     "question": "Who was the first person on space?",
     "answers": [
       "Juri Gagarin",
@@ -228,6 +250,17 @@
       "Nikita Hruštšov"
     ],
     "category": "history",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the seventh planet from the sun?",
+    "answers": [
+      "Uranus",
+      "Neptune",
+      "Saturn",
+      "Jupiter"
+    ],
+    "category": "miscellaneous",
     "difficulty": "easy"
   },
   {
@@ -250,7 +283,7 @@
       "`..--`"
     ],
     "category": "miscellaneous",
-    "difficulty": "medium"
+    "difficulty": "advanced"
   },
   {
     "question": "Which character has the morse code `.---`?",
@@ -261,7 +294,7 @@
       "`L`"
     ],
     "category": "miscellaneous",
-    "difficulty": "medium"
+    "difficulty": "advanced"
   },
   {
     "question": "Which character has the morse code `..--.`?",
@@ -272,7 +305,18 @@
       "`?`"
     ],
     "category": "miscellaneous",
-    "difficulty": "advanced"
+    "difficulty": "hard"
+  },
+  {
+    "question": "How long was the diameter of The Pioneer Cabin Tree (Tunnel Tree)?",
+    "answers": [
+      "6.7 meters",
+      "7.8 meters",
+      "8.9 meters",
+      "5.6 meters"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "hard"
   },
   {
     "question": "How many flats/sharps is the difference between minor and minor?",
@@ -549,6 +593,28 @@
     "category": "physics",
     "difficulty": "advanced"
   },
+  {
+    "question": "Who made the \"Hand of god\"?",
+    "answers": [
+      "Diego Maradona",
+      "Lionel Messi",
+      "Christiano Ronaldo",
+      "Edson Nascimento (Pelé)"
+    ],
+    "category": "sports",
+    "difficulty": "easy"
+  },
+  {
+  "question": "Which country hosted the Olympics on 1952?",
+  "answers": [
+    "Finland",
+    "Sweden",
+    "Norway",
+    "Denmark"
+  ],
+  "category": "sports",
+  "difficulty": "advanced"
+},
   {
     "question": "Which language is used on website layouts?",
     "answers": [
