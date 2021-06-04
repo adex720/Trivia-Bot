@@ -63,7 +63,18 @@ public class Question {
     }
 
     public static void load(Logger logger) {
-        String[] paths = new String[]{"src/main/resources/questions.json"};
+        String[] paths = new String[]{"src/main/resources/questions/biology.json",
+                "src/main/resources/questions/geography.json",
+                "src/main/resources/questions/chemistry.json",
+                "src/main/resources/questions/physics.json",
+                "src/main/resources/questions/history.json",
+                "src/main/resources/questions/video_games.json",
+                "src/main/resources/questions/music.json",
+                "src/main/resources/questions/technology.json",
+                "src/main/resources/questions/culture.json",
+                "src/main/resources/questions/language.json",
+                "src/main/resources/questions/sport.json",
+                "src/main/resources/questions/miscellaneous.json"};
 
         for (String path : paths) {
             try {
