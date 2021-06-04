@@ -14,9 +14,11 @@ public class Leaderboard extends Command {
 
     public static final HashMap<String, Integer> CATEGORIES;
 
-    public static final HashMap<Long, Long> COOLDOWNS = new HashMap<>();
+    public final HashMap<Long, Long> cooldowns;
     public static final int COOLDOWN = 60000;
-    public static final int PER_PAGE = 20;
+    public static int PER_PAGE = 20;
+
+    public final ArrayList<Long> noCooldown;
 
     private final Timer timer;
 
@@ -45,15 +47,21 @@ public class Leaderboard extends Command {
     public Leaderboard(TriviaBot bot) {
         super(bot, "leaderboard", "Shows the leaderboard of a category", "leaderboard <category> [page]");
 
+        cooldowns = new HashMap<>();
+        noCooldown = new ArrayList<>();
+
+        noCooldown.add(560815341140181034L); // ADEX' id
+
         timer = new Timer();
     }
 
     @Override
     public MessageEmbed execute(MessageReceivedEvent event) {
         User user = event.getAuthor();
-        Long time = COOLDOWNS.get(user.getIdLong());
+        long id = user.getIdLong();
+        Long time = cooldowns.get(user.getIdLong());
 
-        if (time != null)
+        if (time != null && !noCooldown.contains(id)) {
             return new EmbedBuilder()
                     .setTitle("LEADERBOARD")
                     .setColor(Color.red)
@@ -62,7 +70,7 @@ public class Leaderboard extends Command {
                     .setFooter(user.getName(), user.getAvatarUrl())
                     .setTimestamp(new Date().toInstant())
                     .build();
-
+        }
 
         String[] args = event.getMessage().getContentRaw().split(" ");
 
@@ -108,13 +116,15 @@ public class Leaderboard extends Command {
         if (page >= 1) {
             if ((bot.profiles.profiles.size() - 1) / PER_PAGE <= page) {
 
-                COOLDOWNS.put(user.getIdLong(), System.currentTimeMillis());
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        COOLDOWNS.remove(user.getIdLong());
-                    }
-                }, COOLDOWN);
+                if (!noCooldown.contains(id)) {
+                    cooldowns.put(id, System.currentTimeMillis());
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            cooldowns.remove(id);
+                        }
+                    }, COOLDOWN);
+                }
 
                 ArrayList<Profile> profiles = bot.profiles.getLeaderboard(categoryId);
                 Collections.reverse(profiles);
