@@ -1,0 +1,24 @@
+[
+  {
+    "question": "Who made the \"Hand of god\"?",
+    "answers": [
+      "Diego Maradona",
+      "Lionel Messi",
+      "Christiano Ronaldo",
+      "Edson Nascimento (Pelé)"
+    ],
+    "category": "sport",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which country hosted the Olympics on 1952?",
+    "answers": [
+      "Finland",
+      "Sweden",
+      "Norway",
+      "Denmark"
+    ],
+    "category": "sport",
+    "difficulty": "advanced"
+  }
+]

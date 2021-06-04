@@ -1,0 +1,57 @@
+[
+  {
+    "question": "How many dimensions are on vanilla Minecraft?",
+    "answers": [
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "category": "video_games",
+    "difficulty": "easy"
+  },
+  {
+    "question": "On Among Us, which color is connected with being sus?",
+    "answers": [
+      "red",
+      "white",
+      "lime",
+      "cyan"
+    ],
+    "category": "video_games",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many stars there are in total on Super Mario 64?",
+    "answers": [
+      "120",
+      "64",
+      "128",
+      "100"
+    ],
+    "category": "video_games",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which was the first game Super Mario appeared in?",
+    "answers": [
+      "Donkey Kong",
+      "Super Mario Bros.",
+      "Mario Bros. (Game & Watch)",
+      "Nintendo Super world"
+    ],
+    "category": "video_games",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which was the first Pokémon to be created?",
+    "answers": [
+      "Rhydon",
+      "Pikachu",
+      "Mew",
+      "Bulbasaur"
+    ],
+    "category": "video_games",
+    "difficulty": "advanced"
+  }
+]

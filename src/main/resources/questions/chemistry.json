@@ -1,0 +1,143 @@
+[{
+  "question": "Which chemical element is S?",
+  "answers": [
+    "Sulphur",
+    "Silver",
+    "Oxygen",
+    "Helium"
+  ],
+  "category": "chemistry",
+  "difficulty": "easy"
+},
+  {
+    "question": "Which is the chemical formula of muriatic acid",
+    "answers": [
+      "HCl",
+      "NCl",
+      "NaCl",
+      "SCl"
+    ],
+    "category": "chemistry",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the chemical symbol of Carbon?",
+    "answers": [
+      "C",
+      "Co",
+      "Ca",
+      "Cr"
+    ],
+    "category": "chemistry",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which chemical element is Ag?",
+    "answers": [
+      "Silver",
+      "Tin",
+      "Lithium",
+      "Platinum"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many iron atoms roughly are on 1 gram?",
+    "answers": [
+      "11 sextillion",
+      "11 quadrillion",
+      "11 quintillion",
+      "11 septillion"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which chemical element is Mn?",
+    "answers": [
+      "Manganese",
+      "Zinc",
+      "Magnesium",
+      "Copper"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the most noble metal?",
+    "answers": [
+      "Gold",
+      "Platinum",
+      "Mercury",
+      "Iridium"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which chemical element is Pb?",
+    "answers": [
+      "Lead",
+      "Phosphorus",
+      "Platinum",
+      "Mercury"
+    ],
+    "category": "chemistry",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the chemical symbol of Copper?",
+    "answers": [
+      "Cu",
+      "Co",
+      "Cp",
+      "C"
+    ],
+    "category": "chemistry",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the chemical symbol of Mercury?",
+    "answers": [
+      "Hg",
+      "Mr",
+      "Mc",
+      "Hr"
+    ],
+    "category": "chemistry",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which chemical element is Gd?",
+    "answers": [
+      "Gadolinium",
+      "Californium",
+      "Cadmium",
+      "Gold"
+    ],
+    "category": "chemistry",
+    "difficulty": "hard"
+  },
+  {
+    "question": "What is the chemical symbol of Lawrencium?",
+    "answers": [
+      "Lr",
+      "Lw",
+      "La",
+      "Lc"
+    ],
+    "category": "chemistry",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which of these metals is the least noble?",
+    "answers": [
+      "Sodium",
+      "Magnesium",
+      "Aluminium",
+      "Zinc"
+    ],
+    "category": "chemistry",
+    "difficulty": "hard"
+  }]

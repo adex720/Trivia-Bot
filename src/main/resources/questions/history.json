@@ -1,0 +1,23 @@
+[{
+  "question": "Germany attacking which country started the second world war?",
+  "answers": [
+    "Poland",
+    "France",
+    "Great Britain",
+    "Czechoslovakia"
+  ],
+  "category": "history",
+  "difficulty": "easy"
+},
+  {
+    "question": "Who was the first person on space?",
+    "answers": [
+      "Juri Gagarin",
+      "Juri Kondratjuk",
+      "Neil Armstrong",
+      "Nikita Hruštšov"
+    ],
+    "category": "history",
+    "difficulty": "easy"
+  }
+]

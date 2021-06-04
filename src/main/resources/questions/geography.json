@@ -1,0 +1,453 @@
+[
+  {
+    "question": "What is the capital of Portugal?",
+    "answers": [
+      "Lissabon",
+      "Rome",
+      "Paris",
+      "Madrid"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which country has the highest population density?",
+    "answers": [
+      "Monaco",
+      "India",
+      "Japan",
+      "Singapore"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which country has the lowest population density?",
+    "answers": [
+      "Mongolia",
+      "Russia",
+      "Denmark (with Greenland)",
+      "Australia"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which causes most of the erosion on Sahara?",
+    "answers": [
+      "Heat",
+      "Wind",
+      "Mechanical",
+      "Sunlight"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the capital of Canada?",
+    "answers": [
+      "Ottawa",
+      "Montreal",
+      "Quebec",
+      "Toronto"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the capital of Chile?",
+    "answers": [
+      "Santiago de Chile",
+      "Calama",
+      "La Serena",
+      "Temuco"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the capital of Arizona?",
+    "answers": [
+      "Phoenix",
+      "Tucson",
+      "Prescott",
+      "Flagstaff"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the capital of Hawaii?",
+    "answers": [
+      "Honolulu",
+      "Kahului",
+      "Waipahu",
+      "Waimea"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the capital of China?",
+    "answers": [
+      "Peking",
+      "Shanghai",
+      "Kanton",
+      "Chonqging"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the capital of Indonesia?",
+    "answers": [
+      "Jakarta",
+      "Balikpapan",
+      "Medan",
+      "Surabaja"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the capital of Egypt?",
+    "answers": [
+      "Cairo",
+      "Alexandria",
+      "New Cairo",
+      "Port Said"
+    ],
+    "category": "geography",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many capitals does the Republic of South Africa have?",
+    "answers": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How is the capital of Hungary spelled right?",
+    "answers": [
+      "Budapest",
+      "Pudapest",
+      "Budabebst",
+      "Pudabest"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "With which country does France share its longest border with?",
+    "answers": [
+      "Brazil",
+      "Germany",
+      "Spain",
+      "Switzerland"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the maximum speed you are allowed to drive on highways on Germany?",
+    "answers": [
+      "There is no limit",
+      "120 km/h",
+      "130 km/h",
+      "140 km/h"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many of the capitals of states also have the highest population on that state on United States?",
+    "answers": [
+      "17",
+      "19",
+      "21",
+      "23"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of Saudi Arabia?",
+    "answers": [
+      "Riad",
+      "Medina",
+      "Dammam",
+      "Mecca"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of Vietnam?",
+    "answers": [
+      "Hanoi",
+      "Hô Chí Minh",
+      "Hai Phòng",
+      "Vientiaine"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of New Zealand?",
+    "answers": [
+      "Wellington",
+      "Auckland",
+      "Hamilton",
+      "Christchurch"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of Argentina?",
+    "answers": [
+      "Buenos Aires",
+      "Rosario",
+      "Córdoba",
+      "Santiago"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of Peru?",
+    "answers": [
+      "Lima",
+      "Quito",
+      "Cusco",
+      "Trujillo"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of California?",
+    "answers": [
+      "Sacramento",
+      "San Francisco",
+      "Los Angeles",
+      "San Diego"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of Massachusetts?",
+    "answers": [
+      "Boston",
+      "Springfield",
+      "Pittsfield",
+      "Worcester"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of Algeria?",
+    "answers": [
+      "Alger",
+      "Oran",
+      "Setif",
+      "Algeria City"
+    ],
+    "category": "geography",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which is the capital of Australia?",
+    "answers": [
+      "Canberra",
+      "Sydney",
+      "Melbourne",
+      "Brisbane"
+    ],
+    "category": "geography",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the capital of Brazil?",
+    "answers": [
+      "Brasília",
+      "São Paolo",
+      "Salvador",
+      "Rio de Janeiro"
+    ],
+    "category": "geography",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the capital of Uruguay?",
+    "answers": [
+      "Montevideo",
+      "Melo",
+      "Maldonado",
+      "Artigas"
+    ],
+    "category": "geography",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the capital of Texas?",
+    "answers": [
+      "Austin",
+      "Houston",
+      "San Antonio",
+      "Dallas"
+    ],
+    "category": "geography",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the capital of Nebraska?",
+    "answers": [
+      "Lincoln",
+      "Omaha",
+      "Grand Island",
+      "North Platte"
+    ],
+    "category": "geography",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the capital of Iran?",
+    "answers": [
+      "Tehran",
+      "Esfahan",
+      "Tabriz",
+      "Mashad"
+    ],
+    "category": "geography",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the capital of Oman?",
+    "answers": [
+      "Muscat",
+      "Salala",
+      "Sohar",
+      "Buraimi"
+    ],
+    "category": "geography",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the capital of Ethiopia?",
+    "answers": [
+      "Addis Abeba",
+      "Mekele",
+      "Bale",
+      "Nekemte"
+    ],
+    "category": "geography",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the capital of Fiji?",
+    "answers": [
+      "Suva",
+      "Lautoka",
+      "Nadi",
+      "Nasinu"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the capital of Nauru?",
+    "answers": [
+      "Yaren",
+      "Boe",
+      "Nibok",
+      "Arijejen"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the capital of Costa Rica?",
+    "answers": [
+      "San José",
+      "Cartaco",
+      "Liberia",
+      "Limón"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the capital of Bolivia?",
+    "answers": [
+      "Sucre",
+      "La Paz",
+      "Cochomamba",
+      "Santa Cruz"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the capital of Oregon?",
+    "answers": [
+      "Salem",
+      "Portland",
+      "Medford",
+      "Seattle"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the capital of Maine?",
+    "answers": [
+      "Augusta",
+      "Waterville",
+      "Bangor",
+      "Portland"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the capital of Kazakhstan?",
+    "answers": [
+      "Nur-Sultan",
+      "Almaty",
+      "Astana",
+      "Karaganda"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the capital of Cambodia?",
+    "answers": [
+      "Phnom Penh",
+      "Sihanoukville",
+      "Bat Dambang",
+      "Kampong"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Which is the capital of Nigeria?",
+    "answers": [
+      "Abuja",
+      "Lagos",
+      "Ibadan",
+      "Kano"
+    ],
+    "category": "geography",
+    "difficulty": "hard"
+  }
+]

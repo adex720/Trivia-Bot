@@ -1,0 +1,68 @@
+[
+  {
+    "example": {
+      "question": "",
+      "answers": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "category": "",
+      "difficulty": ""
+    },
+    "question": "Which were the first plants to perform photosynthesis",
+    "answers": [
+      "Algae",
+      "Jungle trees",
+      "Asteraceae",
+      "Mosses"
+    ],
+    "category": "biology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which of these is a berry?",
+    "answers": [
+      "Banana",
+      "Blueberry",
+      "Strawberry",
+      "Olive"
+    ],
+    "category": "biology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many teeth does an average garden snail have?",
+    "answers": [
+      "14 000",
+      "14",
+      "140",
+      "1 400"
+    ],
+    "category": "biology",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the strongest muscle in a human body?",
+    "answers": [
+      "Tongue",
+      "Soleus",
+      "Masseter",
+      "Heart"
+    ],
+    "category": "biology",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which of these colors of carrots is spliced from other carrots by humans?",
+    "answers": [
+      "orange",
+      "yellow",
+      "white",
+      "purple"
+    ],
+    "category": "biology",
+    "difficulty": "hard"
+  }
+]

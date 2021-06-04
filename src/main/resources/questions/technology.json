@@ -1,0 +1,123 @@
+[
+  {
+    "question": "Which language is used on website layouts?",
+    "answers": [
+      "Html",
+      "Javascript",
+      "C++",
+      "Python"
+    ],
+    "category": "technology",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which language is used on website actions?",
+    "answers": [
+      "Javascript",
+      "Python",
+      "Kotlin",
+      "C#"
+    ],
+    "category": "technology",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the most common programming language?",
+    "answers": [
+      "Python",
+      "Java",
+      "C",
+      "Javascript"
+    ],
+    "category": "technology",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When is the XOR-operation true?",
+    "answers": [
+      "When the values are different",
+      "When none or other of the values is true",
+      "When other or both of the values are true",
+      "When none or both values are true"
+    ],
+    "category": "technology",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which language is used on website styles?",
+    "answers": [
+      "Css",
+      "Html",
+      "Ruby",
+      "Swift"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are the two most common programming languages when making apps for iOs?",
+    "answers": [
+      "Objective-C and Swift",
+      "Java and C#",
+      "Python and Kotlin",
+      "Javascript and C++"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What are the two most common programming languages when making apps for Android?",
+    "answers": [
+      "Java and Kotlin",
+      "Kotlin and Python",
+      "Python and Javascript",
+      "Javascript and Java"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Where is it fastest to get data from?",
+    "answers": [
+      "Registry",
+      "Cache",
+      "Internet",
+      "Ram"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which color has a rgb values of 255,128,0",
+    "answers": [
+      "Orange",
+      "Yellow",
+      "Lime",
+      "Brown"
+    ],
+    "category": "technology",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What is the most advanced stuff a computer can do on one command?",
+    "answers": [
+      "remainder from dividing",
+      "potency",
+      "square root",
+      "dividing"
+    ],
+    "category": "technology",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What does a computer do, if the data is not found on cache?",
+    "answers": [
+      "Send a command to save it into cache, then rerun the previous command.",
+      "Load it from wherever it is in and continue the program normally.",
+      "Search where it is. After found send a command to get it.",
+      "Run into an error."
+    ],
+    "category": "technology",
+    "difficulty": "advanced"
+  }
+]

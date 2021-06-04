@@ -1,0 +1,68 @@
+[
+  {
+    "question": "How long does it take for light to get from the Sun to earth?",
+    "answers": [
+      "8 minutes",
+      "2 minutes",
+      "8 seconds",
+      "2 hours"
+    ],
+    "category": "physics",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does `c` stand for on Albert Einstein's popular mass-energy equivalence `e=mc^2`?",
+    "answers": [
+      "Speed of light",
+      "Density of the object",
+      "Time from the big bang",
+      "Speed the earth is moving"
+    ],
+    "category": "physics",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How many mph is 80 mk/h",
+    "answers": [
+      "50",
+      "45",
+      "55",
+      "60"
+    ],
+    "category": "physics",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How much does the height of the Eiffel tower change between Summer and WInter because of heat expanding?",
+    "answers": [
+      "15 cm",
+      "5cm",
+      "10 cm",
+      "20 cm"
+    ],
+    "category": "physics",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many times is Neptune away from the Sun compared to Earth?",
+    "answers": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "category": "physics",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which is the largest currently known structure on the universe?",
+    "answers": [
+      "Hercules-Corona Borealis Great Wall",
+      "Abell Mega-Cluster 2029",
+      "Andromedian and Biodiversite Galaxy Connection",
+      "The Hubble Deep Field"
+    ],
+    "category": "physics",
+    "difficulty": "hard"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "question": "What does the French phrase `C'est la vie` mean on English?",
+    "answers": [
+      "That's life",
+      "This is the way",
+      "Look here",
+      "Think about that"
+    ],
+    "category": "language",
+    "difficulty": "easy"
+  },
+  {
+    "question": "The Manhattan is named after `Manna-hata` on an Angonquian language. What does it mean on English?",
+    "answers": [
+      "Flowery island",
+      "Increased field",
+      "Long swath",
+      "Nutritious plantation"
+    ],
+    "category": "language",
+    "difficulty": "hard"
+  }
+]

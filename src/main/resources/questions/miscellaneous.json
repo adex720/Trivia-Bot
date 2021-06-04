@@ -1,0 +1,123 @@
+[
+  {
+    "question": "By the famous phrase by Jamal, where does every 60 seconds, a minute pass?",
+    "answers": [
+      "In Africa",
+      "In China",
+      "In Australia",
+      "In Moon"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which is the seventh planet from the sun?",
+    "answers": [
+      "Uranus",
+      "Neptune",
+      "Saturn",
+      "Jupiter"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the morse code for `S`?",
+    "answers": [
+      "`...`",
+      "`---`",
+      "`--.`",
+      "`.-.`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "easy"
+  },
+  {
+    "question": "On which planet does it rain diamonds?",
+    "answers": [
+      "Jupiter",
+      "Saturn",
+      "Neptune",
+      "Uranus"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How many tiles are there on a normal Monopoly board?",
+    "answers": [
+      "41",
+      "40",
+      "36",
+      "44"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Which color was the Coca Cola originally?",
+    "answers": [
+      "Green",
+      "Pink",
+      "Black",
+      "Orange"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "What is the morse code for `P`?",
+    "answers": [
+      "`.--.`",
+      "`----`",
+      "`-.-.`",
+      "`..--`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which character has the morse code `.---`?",
+    "answers": [
+      "`J`",
+      "`I`",
+      "`K`",
+      "`L`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "advanced"
+  },
+  {
+    "question": "Which character has the morse code `..--.`?",
+    "answers": [
+      "`!`",
+      "`.`",
+      "`,`",
+      "`?`"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "hard"
+  },
+  {
+    "question": "How long was the diameter of The Pioneer Cabin Tree (Tunnel Tree)?",
+    "answers": [
+      "6.7 meters",
+      "7.8 meters",
+      "8.9 meters",
+      "5.6 meters"
+    ],
+    "category": "miscellaneous",
+    "difficulty": "hard"
+  },
+  {
+    "question": "Why carrots are orange?",
+    "answers": [
+      "Because the favourite color of a previous Dutch leader's favourite color was orange.",
+      "Because the orange carrots grow faster than other colors.",
+      "Because the animals which perform pollination prefer orange plants.",
+      "Because humans only wanted to eat orange carrots."
+    ],
+    "category": "miscellaneous",
+    "difficulty": "hard"
+  }
+]
